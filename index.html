@@ -458,6 +458,38 @@
     }
 
     /* ══════════════════════════════════════
+       DESPACHO
+    ══════════════════════════════════════ */
+    .despacho {
+      padding: 7rem 0;
+      background: var(--cream);
+    }
+    .despacho__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .despacho__intro {
+      max-width: 520px;
+      margin: 0 auto;
+      color: var(--light);
+      font-size: 0.95rem;
+    }
+    .despacho__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+    .despacho__grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    @media (max-width: 768px) {
+      .despacho__grid { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════
        TESTIMONIOS
     ══════════════════════════════════════ */
     .testimonios {
@@ -738,11 +770,11 @@
     </div>
     <div class="hero__image-wrap">
       <img
-        src="img/Isabel.png"
+        src="img/isabel.png"
         alt="Mª Isabel González Hernández — Abogada de Familia"
       />
       <div class="hero__badge">
-        <strong>+20</strong>
+        <strong>+30</strong>
         <small>Años de experiencia</small>
       </div>
       <div class="hero__image-card">
@@ -781,7 +813,7 @@
           </p>
           <div class="historia__stats">
             <div class="stat">
-              <div class="stat__number">+800</div>
+              <div class="stat__number">+1000</div>
               <div class="stat__label">Casos resueltos</div>
             </div>
             <div class="stat">
@@ -913,7 +945,7 @@
 
         <div class="team-card">
           <div class="team-card__photo">
-            <img src="img/Isabel.png" alt="Mª Isabel González Hernández" />
+            <img src="img/isabel.png" alt="Mª Isabel González Hernández" />
           </div>
           <div class="team-card__name">Mª Isabel González Hernández</div>
           <div class="team-card__role">Abogada — Socia Fundadora</div>
@@ -942,6 +974,25 @@
     </div>
   </section>
 
+
+  <!-- ══════════════════════════════════════
+       DESPACHO
+  ══════════════════════════════════════ -->
+  <section class="despacho" id="despacho">
+    <div class="container">
+      <div class="despacho__header">
+        <span class="section-label">Instalaciones</span>
+        <h2 class="section-title">Nuestro Despacho</h2>
+        <div class="divider"></div>
+        <p class="despacho__intro">Un espacio diseñado para que te sientas cómodo y en confianza desde el primer momento.</p>
+      </div>
+      <div class="despacho__grid">
+        <img src="img/DESPACHO_0.jpeg" alt="Despacho Isabel González — vista 1" />
+        <img src="img/DESPACHO_1.jpeg" alt="Despacho Isabel González — vista 2" />
+        <img src="img/DESPACHO_2.jpeg" alt="Despacho Isabel González — vista 3" />
+      </div>
+    </div>
+  </section>
 
   <!-- ══════════════════════════════════════
        TESTIMONIOS
@@ -1060,7 +1111,7 @@
             <div class="footer__col-title">Contacto</div>
             <div class="footer__contact-item">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.18 9.9a19.79 19.79 0 01-3.07-8.67A2 2 0 012.09 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.9l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-              927 21 58 01 · 626 76 61 82
+              927 21 58 01 · +34 624 35 06 86
             </div>
             <div class="footer__contact-item">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
