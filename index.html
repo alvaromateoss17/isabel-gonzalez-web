@@ -599,6 +599,47 @@
       font-size: 0.95rem;
     }
     .citas__intro strong { color: var(--dark); }
+    .citas__card {
+      max-width: 520px;
+      margin: 0 auto;
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 8px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+    }
+    .citas__card-icon {
+      color: var(--gold);
+      margin-bottom: 1.25rem;
+    }
+    .citas__card-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .citas__card-text {
+      color: var(--light);
+      font-size: 0.92rem;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    .citas__horario {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding: 1.25rem;
+      background: var(--cream);
+      border-radius: 6px;
+    }
+    .citas__horario-item { display: flex; flex-direction: column; gap: 0.25rem; }
+    .citas__horario-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); }
+    .citas__horario-time { font-family: var(--serif); font-size: 1.05rem; color: var(--dark); }
+    .citas__horario-sep { width: 1px; height: 36px; background: rgba(0,0,0,0.12); }
+    .citas__btn { width: 100%; justify-content: center; font-size: 1rem; padding: 1rem; }
+    .citas__card-note { margin-top: 0.9rem; font-size: 0.78rem; color: var(--light); }
 
     /* ══════════════════════════════════════
        FOOTER
@@ -1093,10 +1134,34 @@
           Las horas ya reservadas aparecen bloqueadas automáticamente.
         </p>
       </div>
-      <!-- CALENDLY EMBED — Sustituye YOUR_CALENDLY_URL por tu enlace de Calendly (ej. https://calendly.com/despachoisabel) -->
-      <div class="calendly-inline-widget" data-url="https://calendly.com/despachoabogadosigh-l847?hide_gdpr_banner=1&primary_color=9a7c4f" style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <div class="citas__card">
+        <div class="citas__card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3 class="citas__card-title">Elige tu día y hora</h3>
+        <p class="citas__card-text">
+          Haz clic en el botón para abrir el calendario de reservas. Solo tienes que elegir el día disponible, la franja horaria y rellenar tus datos. Recibirás una confirmación por email de forma inmediata.
+        </p>
+        <div class="citas__horario">
+          <div class="citas__horario-item">
+            <span class="citas__horario-label">Mañana</span>
+            <span class="citas__horario-time">9:30 – 13:30 h</span>
+          </div>
+          <div class="citas__horario-sep"></div>
+          <div class="citas__horario-item">
+            <span class="citas__horario-label">Tarde</span>
+            <span class="citas__horario-time">17:00 – 19:00 h</span>
+          </div>
+        </div>
+        <button class="btn-primary citas__btn" onclick="Calendly.initPopupWidget({url:'https://calendly.com/despachoabogadosigh-l847?hide_gdpr_banner=1&primary_color=9a7c4f'});return false;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Reservar Cita Ahora
+        </button>
+        <p class="citas__card-note">Primera consulta gratuita · Sin compromiso</p>
+      </div>
     </div>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
   </section>
 
   <!-- ══════════════════════════════════════
